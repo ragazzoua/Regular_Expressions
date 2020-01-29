@@ -23,6 +23,7 @@ public class Main {
 
         System.out.println(alphaNumeric.replaceAll("ijkl99z", "The END"));
         System.out.println(alphaNumeric.replaceAll("[aei]", "X"));
+        System.out.println(alphaNumeric.replaceAll("[aei][Fj]", "Y"));
 
 
     }
