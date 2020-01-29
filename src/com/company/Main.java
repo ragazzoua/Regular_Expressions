@@ -10,7 +10,7 @@ public class Main {
         String yourString = string.replaceAll("I", "You");
         System.out.println(yourString);
 
-        String alphaNumeric = "abcDeeeF12Ghhiiiijkl";
+        String alphaNumeric = "abcDeeeF12Ghhiiiijkl99z";
         System.out.println(alphaNumeric.replaceAll(".", "Y"));
         System.out.println(alphaNumeric.replaceAll("^abcDeee", "YYY"));
 
@@ -20,6 +20,9 @@ public class Main {
         System.out.println(alphaNumeric.matches("^hello"));
         System.out.println(alphaNumeric.matches("^abcDeee"));
         System.out.println(alphaNumeric.matches("^abcDeeeF12Ghhiiiijkl"));
+
+        System.out.println(alphaNumeric.replaceAll("ijkl99z", "The END"));
+        System.out.println(alphaNumeric.replaceAll("[aei]", "X"));
 
 
     }
