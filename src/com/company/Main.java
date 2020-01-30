@@ -44,6 +44,7 @@ public class Main {
         System.out.println(hasWhitespace.replaceAll("\\S", "X"));
         System.out.println(newAlphaNumeric.replaceAll("\\w", "X"));
         System.out.println(hasWhitespace.replaceAll("\\w", "X"));
+        System.out.println(hasWhitespace.replaceAll("\\b", "<tab>"));
 
 
     }
