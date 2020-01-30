@@ -25,6 +25,15 @@ public class Main {
         System.out.println(alphaNumeric.replaceAll("[aei]", "X"));
         System.out.println(alphaNumeric.replaceAll("[aei][Fj]", "Y"));
 
+        System.out.println("Harry".replaceAll("[Hh]arry", "Harry"));
+
+        String newAlphaNumeric = "abcDeeeF12Ghhiiiijkl99z";
+        System.out.println(newAlphaNumeric.replaceAll("[^ej]", "X"));
+
+        System.out.println(newAlphaNumeric.replaceAll("[abcdef345678]", "X"));
+        System.out.println(newAlphaNumeric.replaceAll("[a-f3-8]", "X"));
+        System.out.println(newAlphaNumeric.replaceAll("(?i)[a-f3-8]", "X"));
+
 
     }
 
