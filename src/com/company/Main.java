@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main {
 
     private static int a = 5;
@@ -53,7 +56,19 @@ public class Main {
         System.out.println(thirdAlphaNumeric.replaceAll("^abcDe+", "YYY"));
         System.out.println(thirdAlphaNumeric.replaceAll("^abcDe*", "YYY"));
         System.out.println(thirdAlphaNumeric.replaceAll("^abcDe{2,5}", "YYY"));
+        System.out.println(thirdAlphaNumeric.replaceAll("^h+i*", "Y"));
 
+        StringBuilder htmlText = new StringBuilder("<h1>My Heading</h1>");
+        htmlText.append("<h2>Sub Heading</h2>");
+        htmlText.append("<p>This is paragraph about something</p>");
+        htmlText.append("<p>This is another paragraph about something</p>");
+        htmlText.append("<h2>Summary</h2>");
+        htmlText.append("<p>Here is summary</p>");
+
+        String h2Pattern = "<h2>";
+        Pattern pattern = Pattern.compile(h2Pattern);
+        Matcher matcher = pattern.matcher(htmlText);
+        System.out.println(matcher.matches());
 
 
     }
