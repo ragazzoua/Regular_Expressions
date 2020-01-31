@@ -71,8 +71,16 @@ public class Main {
         System.out.println(matcher.matches());
 
 
+        matcher.reset();
+
+        int count = 0;
+        while (matcher.find()){
+            count++;
+            System.out.println("" + count + " : " +  matcher.start() +  " to " + matcher.end());
+        }
+
+
+
     }
-
-
 
 }
