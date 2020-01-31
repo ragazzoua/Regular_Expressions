@@ -47,6 +47,15 @@ public class Main {
         System.out.println(hasWhitespace.replaceAll("\\b", "<tab>"));
 
 
+        String thirdAlphaNumeric = "abcDeeeF12Ghhiiiijkl99z";
+
+        System.out.println(thirdAlphaNumeric.replaceAll("^abcDe{3}", "YYY"));
+        System.out.println(thirdAlphaNumeric.replaceAll("^abcDe+", "YYY"));
+        System.out.println(thirdAlphaNumeric.replaceAll("^abcDe*", "YYY"));
+        System.out.println(thirdAlphaNumeric.replaceAll("^abcDe{2,5}", "YYY"));
+
+
+
     }
 
 
