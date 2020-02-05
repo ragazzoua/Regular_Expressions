@@ -81,6 +81,16 @@ public class Main {
 
 
 
+        String h2GroupPattern = "(<h2>.*?<h2>)";
+        Pattern groupPattern = Pattern.compile(h2GroupPattern);
+        Matcher groupMatcher = groupPattern.matcher(htmlText);
+        System.out.println(groupMatcher.matches());
+        groupMatcher.reset();
+
+        while (groupMatcher.find()){
+            System.out.println("occurance " + groupMatcher.group(2));
+        }
+
     }
 
 }
