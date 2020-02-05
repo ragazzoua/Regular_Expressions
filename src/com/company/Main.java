@@ -123,6 +123,9 @@ public class Main {
         System.out.println(challenge5.matches("[a-g]+"));
         System.out.println(challenge5.matches("^a{3}bc{8}d{3}ef{3}g$"));
         System.out.println(challenge5.replaceAll("a{3}bc{8}d{3}ef{3}g$", "REPLACED"));
+
+        String challenge7 = "abcd.135";
+        System.out.println(challenge7.matches("^[A-z][a-z]+\\.\\d+$"));
     }
 
 }
