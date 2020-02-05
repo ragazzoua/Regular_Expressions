@@ -126,6 +126,13 @@ public class Main {
 
         String challenge7 = "abcd.135";
         System.out.println(challenge7.matches("^[A-z][a-z]+\\.\\d+$"));
+
+        String challenge8 = "abcd.135uvqz.7tzik.999";
+        Pattern pattern8 = Pattern.compile("[A-Za-z]+\\.(\\d+)");
+        Matcher matcher8 = pattern8.matcher(challenge8);
+        while (matcher8.find()){
+            System.out.println(matcher8.group(1));
+        }
     }
 
 }
