@@ -74,11 +74,10 @@ public class Main {
         matcher.reset();
 
         int count = 0;
-        while (matcher.find()){
+        while (matcher.find()) {
             count++;
-            System.out.println("" + count + " : " +  matcher.start() +  " to " + matcher.end());
+            System.out.println("" + count + " : " + matcher.start() + " to " + matcher.end());
         }
-
 
 
         String h2GroupPattern = "(<h2>.*?<h2>)";
@@ -87,10 +86,32 @@ public class Main {
         System.out.println(groupMatcher.matches());
         groupMatcher.reset();
 
-        while (groupMatcher.find()){
-            System.out.println("occurance " + groupMatcher.group(2));
+        while (groupMatcher.find()) {
+            System.out.println("occurance " + groupMatcher.group(1));
         }
 
+        System.out.println("-----------------------------------");
+        String challange1 = "I want a bike.";
+        System.out.println(challange1.matches("I want a bike"));
+
+        String regExp = "I want a \\w+.";
+        System.out.println(challange1.matches(regExp));
+
+        String challange2 = "I want a ball.";
+
+        System.out.println(challange2.matches(regExp));
+
+        String regExp1 = "I want a (bike|ball).";
+        System.out.println(challange1.matches(regExp1));
+        System.out.println(challange2.matches(regExp1));
+
+        String regExp3 = "I want a \\w+.";
+        Pattern pattern1 = Pattern.compile(regExp3);
+        Matcher matcher1 = pattern1.matcher(challange1);
+        System.out.println(matcher1.matches());
+
+        matcher1 = pattern1.matcher(challange2);
+        System.out.println(matcher1.matches());
     }
 
 }
