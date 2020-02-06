@@ -142,6 +142,14 @@ public class Main {
             System.out.println(matcher9.group(1));
         }
 
+        String challenge10 = "abcd.135\tuvqz.7\ttzik.999\n";
+
+        Pattern pattern10 = Pattern.compile("[A-Za-z]+\\.(\\d+)\\s");
+        Matcher matcher10 = pattern10.matcher(challenge9);
+        while (matcher10.find()){
+            System.out.println("start " + matcher10.start() + " end " +  (matcher10.end() -1));
+        }
+
     }
 
 }
