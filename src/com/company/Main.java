@@ -164,6 +164,16 @@ public class Main {
         while (matcher11a.find()) {
             System.out.println("occurence " + matcher11a.group(1));
         }
+
+        String challenge12 = "11111";
+        System.out.println(challenge12.matches("^\\d{5}$"));
+
+        String challenge13 = "11111-1111";
+        System.out.println(challenge13.matches("^\\d{5}-\\d{4}$"));
+
+
+        System.out.println(challenge12.matches("^\\d{5}(-\\d{4})?$"));
+        System.out.println(challenge13.matches("^\\d{5}(-\\d{4})?$"));
     }
 
 }
